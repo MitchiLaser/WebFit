@@ -36,11 +36,8 @@ body{
     align-items: stretch;
 }
 
-/* All child-tags from the body should take the full width of the viewport */
 body > *{
     flex: 0 0 auto;
-    display: none;
-    /* as long as all the JavaScript files have not been loaded: only display the loading gif */
 }
 
 body > div,
@@ -64,6 +61,7 @@ body > div h1{
     font-size: 3rem;
 }
 
+/* the moving dot for the loading-animation */
 div.animation-ring{
     display: inline-block;
     box-sizing: content-box;
@@ -82,4 +80,47 @@ div.animation-ring{
     0%   {translate: calc( var(--animation-ring-amlitude) * (-1) );}
     50%  {translate: var(--animation-ring-amlitude);}
     100% {translate: calc( var(--animation-ring-amlitude) * (-1) );}
+}
+
+/* the footer contains the copyright-information and links to the imprint and privacy explanation.
+   It hast to be visible all the time. */
+footer{
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 5%;
+    margin: 0;
+    border: none;
+    background-color: var(--layout-primary-color);
+    color: var(--layout-fontcolor);
+}
+
+/* add the Copyright-logo and the  */
+footer .copyright-owner::before{
+    content: "© ";
+}
+
+
+/* All child-tags from the body should take the full width of the viewport */
+body > header,
+body > main{
+    display: none;
+    /* as long as all the JavaScript files have not been loaded: only display the loading gif */
+}
+
+/* behavior of hyperlinks */
+a,
+a:link,
+a:visited{
+    text-decoration-line: inherit;
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover,
+a:active{
+    text-decoration-line: underline;
+    text-decoration: underline;
 }

@@ -1,12 +1,12 @@
 :root{
-    --noscript-background-color: #ff5722;
+    --noscript-background-color: #ab2b30;
     --noscript-font-color: #fff;
 }
 body > *,
 body > div{
     display: none;
 }
-body > noscript{
+noscript{
     flex: 1 1 auto;
     display: flex;
     flex-direction: row;
@@ -15,8 +15,14 @@ body > noscript{
     background-color: var(--noscript-background-color);
     color: var(--noscript-font-color);
 }
-body > noscript h1{
+noscript h1{
     flex: 1 1 auto;
     font-size: 3rem;
     text-align: center;
+}
+
+footer{
+    display:flex;
+    background-color: var(--noscript-background-color);
+    color: var(--noscript-font-color);
 }
