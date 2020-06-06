@@ -3,13 +3,17 @@
     --layout-background-color: #fff;
     --layout-background-fontcolor: #000;
 
-    --layout-primary-color: #8bc34a;
-    --layout-primary-fontcolor: #fff;
+    --layout-fontcolor: #fff;
+
+    --layout-primary-color: #009a93;
+
+    --layout-secondary-color: #1d1d1d;
+    --layout-secondary-use-as-font-color: #444;
 
     /* variables for the loading-screen animation */
-    --animation-ring-color: var(--layout-background-color);
+    --animation-ring-color: var(--layout-fontcolor);
     --animation-ring-duration: 6s;
-    --animation-ring-timing: ease;;
+    --animation-ring-timing: ease-in-out;
     --animation-ring-amlitude: 10vw;
 }
 html,
@@ -53,7 +57,7 @@ body > div{
     justify-content: center;
     justify-items: center;
     background-color: var(--layout-primary-color);
-    color: var(--layout-primary-fontcolor);
+    color: var(--layout-fontcolor);
 }
 
 body > div h1{
