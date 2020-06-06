@@ -1,0 +1,22 @@
+:root{
+    --noscript-background-color: #ff5722;
+    --noscript-font-color: #fff;
+}
+body > *,
+body > div{
+    display: none;
+}
+body > noscript{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: stretch;
+    background-color: var(--noscript-background-color);
+    color: var(--noscript-font-color);
+}
+body > noscript h1{
+    flex: 1 1 auto;
+    font-size: 3rem;
+    text-align: center;
+}

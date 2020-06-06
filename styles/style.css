@@ -1,0 +1,81 @@
+:root{
+    /* colors */
+    --layout-background-color: #fff;
+    --layout-background-fontcolor: #000;
+
+    --layout-primary-color: #8bc34a;
+    --layout-primary-fontcolor: #fff;
+
+    /* variables for the loading-screen animation */
+    --animation-ring-color: var(--layout-background-color);
+    --animation-ring-duration: 6s;
+    --animation-ring-timing: ease;;
+    --animation-ring-amlitude: 10vw;
+}
+html,
+body{
+    /* Remove Browser-defined borders and fit the view into the website */
+    margin: 0;
+    border: none;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+
+    /* some basic font settings for the whole website */
+    font-family: sans-serif;
+
+    /* Align all items as in an application-window: manu on top, editor in middle and footnotes on the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+/* All child-tags from the body should take the full width of the viewport */
+body > *{
+    flex: 0 0 auto;
+    display: none;
+    /* as long as all the JavaScript files have not been loaded: only display the loading gif */
+}
+
+body > div,
+body > main{
+    flex: 1 1 auto;
+}
+
+/* Website is loading: display loading gif.
+   Loading is done: display application content and remove loading gif  */
+body > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    background-color: var(--layout-primary-color);
+    color: var(--layout-primary-fontcolor);
+}
+
+body > div h1{
+    font-size: 3rem;
+}
+
+div.animation-ring{
+    display: inline-block;
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: solid 1px var(--animation-ring-color);
+    background-color: var(--animation-ring-color);
+    animation: loading-strip var(--animation-ring-duration) var(--animation-ring-timing) infinite;
+}
+
+/* loading-aimation */
+@keyframes loading-strip{
+    0%   {translate: calc( var(--animation-ring-amlitude) * (-1) );}
+    50%  {translate: var(--animation-ring-amlitude);}
+    100% {translate: calc( var(--animation-ring-amlitude) * (-1) );}
+}
