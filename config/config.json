@@ -1,0 +1,10 @@
+{
+    "version":1.0,
+    "debug":true,
+    "styles":[
+        "layout.css"
+    ],
+    "modules":{
+        "save_as_file":true
+    }
+}
