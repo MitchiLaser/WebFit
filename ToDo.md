@@ -1,12 +1,11 @@
 # actual ToDo list:
 
-* script to fetch all css-files and JavaScript modules
+* script to fetch all JavaScript modules
   * fetch config
-  * fetch all style-files listed in config and add them
   * fetch all script-files listed in config and add them as modules
-  * enable main UI
-* main UI
+* Hauptprogramm
 * Copyright-Hinweis via JavaScript aktualisieren
+* App-settings.json
 
 ## Einstellungen, die Vorgenommen werden können
 

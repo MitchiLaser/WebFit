@@ -5,6 +5,6 @@
         "layout.css"
     ],
     "modules":{
-        "save_as_file":true
+        "app_settings":true
     }
 }

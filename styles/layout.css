@@ -1,0 +1,14 @@
+/* layout of the web-app Header:
+   the header is used as a menu to switch between the different steps */
+
+
+/* layout of the main-application */
+
+/* after everything has been rendered: switch between UI and loading-screen */
+body > div{
+    display: none;
+}
+body > header,
+body > main{
+    display: flex;
+}

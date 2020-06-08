@@ -101,14 +101,6 @@ footer .copyright-owner::before{
     content: "© ";
 }
 
-
-/* All child-tags from the body should take the full width of the viewport */
-body > header,
-body > main{
-    display: none;
-    /* as long as all the JavaScript files have not been loaded: only display the loading gif */
-}
-
 /* behavior of hyperlinks */
 a,
 a:link,
@@ -123,4 +115,11 @@ a:hover,
 a:active{
     text-decoration-line: underline;
     text-decoration: underline;
+}
+
+/* All child-tags from the body should take the full width of the viewport */
+body > header,
+body > main{
+    display: none;
+    /* as long as all the JavaScript files have not been loaded: only display the loading gif */
 }
